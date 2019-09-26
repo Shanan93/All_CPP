@@ -1,5 +1,7 @@
 #include <iostream>
 
+  // Sexy prime pairs
+
 bool is_prime(int const num)
 {
 	if (num <= 3) { 
@@ -27,15 +29,14 @@ int main()
 
 	std::cout << "Upper limit:";
 	std::cin >> limit;
-
-	for (int i = limit; i > 1; i--)
-	{
-		if (is_prime(i))
+	
+	for (int n = 2; n <= limit; n++)
 		{
-		std::cout << "Largest prime:" << i << std::endl;
-		return 0;
+			if (is_prime(n) && is_prime(n+6))
+			{
+				std::cout << n << "," << n+6 << std::endl;
+			}
 		}
-	}
 	
 }
 

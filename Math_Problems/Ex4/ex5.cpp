@@ -1,13 +1,10 @@
 #include <iostream>
 
-
-// Largest prime smaller than given number code
-
 bool is_prime(int const num)
 {
 	if (num <= 3) { 
 		return num > 1; }
-	else if(num % 2 == 0 || num % 3 == 0)
+	else if (num % 2 == 0 || num % 3 == 0)
 	{
 		return false;
 	}
@@ -17,8 +14,8 @@ bool is_prime(int const num)
 		{
 			if (num % i == 0 || num % (i + 2) == 0)
 			{
-			return false;
-			}
+				return false;
+			}	
 		}
 		return true;
 	}
@@ -27,15 +24,18 @@ bool is_prime(int const num)
 int main()
 {
 	int limit = 0;
+
 	std::cout << "Upper limit:";
 	std::cin >> limit;
+
 	for (int i = limit; i > 1; i--)
 	{
 		if (is_prime(i))
 		{
-			std::cout << "Largest prime:" << i << std::endl;
-			return 0;
+		std::cout << "Largest prime:" << i << std::endl;
+		return 0;
 		}
+	}
+	
 }
-	return 0;
-}
+
